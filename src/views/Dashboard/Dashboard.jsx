@@ -1,9 +1,13 @@
+import Cards from "../components/Cards"
+
+
 const Dashboard = () => {
-    return(
+    return (
         <>
-            <div className=" ml-auto p-4">
-                <h1>Bienvenido LOBODANIELJEAN</h1>
-                
+            <div className="flex w-auto m-2">
+                <Cards />
+                <Cards />
+                <Cards />
             </div>
         </>
     )

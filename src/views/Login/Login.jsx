@@ -1,4 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
+
 const Login = () => {
+    const navigate = useNavigate();
+
+    const SubmitLogin = () => {
+        navigate("/Dashboard");
+    }
 
     return(
         <>
@@ -18,7 +26,7 @@ const Login = () => {
                             <input type="text" className="px-3 w-[340px] py-1 rounded-full border-2 border-[#484848] m-3" placeholder="Contraseña"/>
                         </div>
                         <div className="flex flex-col pb-8 ">
-                            <button className="bg-[#8D5A13] text-white rounded-full py-1 px-6 hover:border-[#8D5A13]">Iniciar Sesión</button>
+                            <button onClick={SubmitLogin}  className="bg-[#8D5A13] text-white rounded-full py-1 px-6 hover:border-[#8D5A13]">Iniciar Sesión</button>
                             <a href="#" className="underline decoration-black text-sm text-black mt-6 hover:text-slate-900 ">Olvide mi Contraseña</a>
                         </div>
                     </div>
